@@ -152,7 +152,6 @@ cmp.setup({
     },
 }
 
---checking git status
 
 
 -- require("supermaven-nvim").setup({
