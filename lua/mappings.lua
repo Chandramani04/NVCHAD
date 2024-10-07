@@ -1,5 +1,5 @@
 require "nvchad.mappings"
-
+-- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 -- add yours here
 
 local map = vim.keymap.set
@@ -15,27 +15,3 @@ map("i", "<C-l>", function()
   require("copilot.suggestion").accept()
 end, { desc = "Copilot accept" })
 
-
--- map("i", "<C-l>", function()
---   vim.fn.feedkeys(vim.fn['copilot#Accept'](), '')
--- end, {
---   desc = "Copilot Accept",
---   replace_keycodes = true,
---   nowait = true,
---   silent = true,
---   expr = true,
---   noremap = true
--- })
--- M.copilot = {
---   i = {
---     ["<C-l>"] = {
---       function()
---         vim.fn.feedkeys(vim.fn['copilot#Accept'](), '')
---       end,
---       "Copilot Accept",
---        {replace_keycodes = true, nowait=true, silent=true, expr=true, noremap=true}
---       }
---   }
--- }
-
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
