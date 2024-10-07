@@ -31,5 +31,27 @@ return {
     },
 
     "mg979/vim-visual-multi",
+
     { "rose-pine/neovim", name = "rose-pine" },
+    --copilot
+    {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        opts = {
+            panel = {
+                auto_refresh = true,
+                layout = {
+                    position = "right",
+                    ratio = 0.3,
+                },
+            },
+            suggestion = {
+                auto_trigger = true,
+                keymap = {
+                    accept = "<C-l>",
+                },
+            },
+        },
+    },
 }
