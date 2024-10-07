@@ -33,9 +33,13 @@ return {
     "mg979/vim-visual-multi",
 
     { "rose-pine/neovim", name = "rose-pine" },
+
+    { "hrsh7th/nvim-cmp" },
+
     --copilot
     {
         "zbirenbaum/copilot.lua",
+        -- enabled = false,
         cmd = "Copilot",
         event = "InsertEnter",
         opts = {
@@ -57,12 +61,14 @@ return {
 
     {
         "zbirenbaum/copilot-cmp",
+        -- enabled = false,
         config = function()
             require("copilot_cmp").setup()
         end,
     },
     {
         "supermaven-inc/supermaven-nvim",
+        enabled = false,
         config = function()
             require("supermaven-nvim").setup({})
         end,
