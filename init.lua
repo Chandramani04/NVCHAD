@@ -53,7 +53,7 @@ end)
 --vscode format i.e json files
 -- /home/cmd/.config/nvim/snippets/vscode
 vim.g.vscode_snippets_path = "/home/cmd/.config/nvim/snippets/vscode"
-
+require("luasnip.loaders.from_vscode").lazy_load() -- Load VSCode-style snippets
 --emmet-ls setup
 local lspconfig = require("lspconfig")
 local configs = require("lspconfig.configs")
@@ -116,43 +116,45 @@ require("copilot").setup({
 require("copilot_cmp").setup()
 
 -- nvim-cmp setup
-local cmp = require("cmp")
-cmp.setup({
-    sources = {
-        { name = "copilot", group_index = 2 },
-        { name = "nvim_lsp", group_index = 2 },
-        -- Add more sources here as needed
-    },
-})
+-- local cmp = require("cmp")
+-- cmp.setup({
+--     -- snippet = {
+--     --     expand = function(args)
+--     --         -- luasnip.lsp_expand(args.body) -- LuaSnip expanding snippets
+--     --         vim.fn["vsnip#anonymous"](args.body) -- VsCode expanding snippets
+--     --     end,
+--     -- },
+--     sources = {
+--         { name = "nvim_lsp", group_index = 2 },
+--         { name = "copilot", group_index = 2 },
+--         -- Add more sources here as needed
+--     },
+-- })
 
-
-
- require('multicursors').setup {
+require("multicursors").setup({
     -- local N = require("multicursors.normal_mode"),
-        --fix this , it's saying undefined global N 
+    --fix this , it's saying undefined global N
     normal_keys = {
         -- to change default lhs of key mapping change the key
-        [','] = {
+        [","] = {
             -- assigning nil to method exits from multi cursor mode
             -- assigning false to method removes the binding
             method = require("multicursors.normal_mode").clear_others,
             -- you can pass :map-arguments here
-            opts = { desc = 'Clear others' },
+            opts = { desc = "Clear others" },
         },
-        ['<C-/>'] = {
+        ["<C-/>"] = {
             method = function()
-                require('multicursors.utils').call_on_selections(function(selection)
+                require("multicursors.utils").call_on_selections(function(selection)
                     vim.api.nvim_win_set_cursor(0, { selection.row + 1, selection.col + 1 })
                     local line_count = selection.end_row - selection.row + 1
-                    vim.cmd('normal ' .. line_count .. 'gcc')
+                    vim.cmd("normal " .. line_count .. "gcc")
                 end)
             end,
-            opts = { desc = 'comment selections' },
+            opts = { desc = "comment selections" },
         },
     },
-}
-
-
+})
 
 -- require("supermaven-nvim").setup({
 --   keymaps = {

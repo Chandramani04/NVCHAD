@@ -33,3 +33,4 @@ lspconfig.emmet_ls.setup({
     capabilities = nvlsp.capabilities,
     flags = nvlsp.lsp_flags,
 })
+

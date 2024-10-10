@@ -4,18 +4,19 @@
     "body": [
       "#include<bits/stdc++.h>",
       "using namespace std;",
+      "#define int long long",
       "",
       "void solve(){",
-        "  $0",
-        "}",
-        "",
-        "signed main(){",
-          "  int tt;",
-          "  cin >> tt; ",
-          "  while(tt--){",
-            "    solve();  ",
-            "  }",
-            "}"
+      "    $0",
+      "}",
+      "",
+      "signed main(){",
+      "    int tt;",
+      "    cin >> tt; ",
+      "    while(tt--){",
+      "      solve();  ",
+      "    }",
+      "}"
     ],
     "description": "CP"
   }
