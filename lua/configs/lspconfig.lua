@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require("lspconfig")
 
 -- EXAMPLE
-local servers = { "html", "cssls", "clangd" }
+local servers = { "html", "cssls", "clangd", }
 local nvlsp = require("nvchad.configs.lspconfig")
 
 -- lsps with default config
@@ -34,3 +34,19 @@ lspconfig.emmet_ls.setup({
     flags = nvlsp.lsp_flags,
 })
 
+--config for html 
+lspconfig.html.setup({
+    on_attach = nvlsp.on_attach,
+    capabilities = nvlsp.capabilities,
+    flags = nvlsp.lsp_flags,
+    --set file types for lsp 
+    filetypes = { "html", "htmldjango" , "ejs"   },
+})
+
+--config for cpp 
+lspconfig.clangd.setup({
+    on_attach = nvlsp.on_attach,
+    capabilities = nvlsp.capabilities,
+    flags = nvlsp.lsp_flags,
+    }
+)

@@ -1,23 +1,28 @@
 {
-  "CP": {
+  "cp template": {
     "prefix": "boilerplate",
     "body": [
-      "#include<bits/stdc++.h>",
+      "#include <bits/stdc++.h>",
       "using namespace std;",
       "#define int long long",
       "",
-      "void solve(){",
+      "void solve() {",
       "    $0",
       "}",
       "",
-      "signed main(){",
+      "signed main() {",
+      "",
+      "#ifndef ONLINE_JUDGE",
+      "    freopen(\"input.txt\", \"r\", stdin);",
+      "    freopen(\"output.txt\", \"w\", stdout);",
+      "#endif",
       "    int tt;",
-      "    cin >> tt; ",
-      "    while(tt--){",
-      "      solve();  ",
+      "    cin >> tt;",
+      "    while (tt--) {",
+      "        solve();",
       "    }",
       "}"
     ],
-    "description": "CP"
+    "description": "cp template"
   }
 }

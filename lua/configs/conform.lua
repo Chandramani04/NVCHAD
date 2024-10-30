@@ -14,6 +14,7 @@ local options = {
         typescriptreact = { "prettier" },
         json = { "prettier" },
         markdown = { "prettier" },
+        cpp = { "clang-format" },
     },
 
     format_on_save = {

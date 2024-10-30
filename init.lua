@@ -30,14 +30,14 @@ require("lazy").setup({
 -- })
 
 --live-preview setup
-require("live-preview").setup({
-    commands = {
-        start = "LivePreview", -- Command to start the live preview server and open the default browser. Default is 'LivePreview'
-        stop = "StopPreview", -- Command to stop the live preview. Default is 'StopPreview'
-    },
-    port = 5500, -- Port to run the live preview server on. Default is 5500
-    browser = "default", -- Browser to open the live preview in. Default is 'default', meaning the default browser of your system will be used
-})
+-- require("live-preview").setup({
+--     commands = {
+--         start = "LivePreview", -- Command to start the live preview server and open the default browser. Default is 'LivePreview'
+--         stop = "StopPreview", -- Command to stop the live preview. Default is 'StopPreview'
+--     },
+--     port = 5500, -- Port to run the live preview server on. Default is 5500
+--     browser = "default", -- Browser to open the live preview in. Default is 'default', meaning the default browser of your system will be used
+-- })
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
@@ -105,11 +105,12 @@ require("onedarkpro").setup({
 -- copilot.lua setup
 require("copilot").setup({
     suggestion = {
-        enabled = false,
+        -- enabled = false,
+        enabled = true,
         auto_trigger = true,
         debounce = 75,
     }, -- Disable default Copilot suggestions
-    panel = { enabled = false }, -- Disable Copilot panel if not needed
+    -- panel = { enabled = false }, -- Disable Copilot panel if not needed
 })
 
 -- copilot-cmp setup
@@ -175,3 +176,11 @@ require("multicursors").setup({
 --     return false
 --   end -- condition to check for stopping supermaven, `true` means to stop supermaven when the condition is true.
 -- })
+
+-- if vim.g.vscode then
+--     -- VSCode extension
+-- else
+--     -- ordinary Neovim
+-- end
+--
+vim.keymap.set("i", "ff", "<ESC>")
