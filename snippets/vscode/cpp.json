@@ -16,7 +16,7 @@
       "    freopen(\"input.txt\", \"r\", stdin);",
       "    freopen(\"output.txt\", \"w\", stdout);",
       "#endif",
-      "    int tt;",
+      "    int tt = 1;",
       "    cin >> tt;",
       "    while (tt--) {",
       "        solve();",
@@ -24,5 +24,27 @@
       "}"
     ],
     "description": "cp template"
+  },
+  "algozenith": {
+    "prefix": "algozenith",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "#define int long long",
+      "",
+      "void solve() {",
+      "   $0 ",
+      "}",
+      "",
+      "signed main() {",
+      "    int tt = 1;",
+      "    cin >> tt;",
+      "    while (tt--) {",
+      "        solve();",
+      "    }",
+      "}",
+      ""
+    ],
+    "description": "algozenith"
   }
 }
