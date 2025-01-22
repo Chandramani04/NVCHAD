@@ -1,0 +1,67 @@
+Ctrl + b              -> move beginning of line
+Ctrl + e              -> move end of line 
+Ctrl + a              -> select all 
+Ctrl + s              -> save (:w)
+Ctrl + c              -> copy whole file (:%y)
+Ctrl + ch             -> open nvcheatsheet (Esc to quit)
+Ctrl + n              -> toggle nvimtree 
+Ctrl + w + h          -> horizontal split 
+Ctrl + w + v          -> vertical split 
+Ctrl + h/j/k/l         -> naviagate between split windows 
+
+"n" + tab             -> switch tabs in normal mode 
+
+leader + th           -> change colorscheme 
+leader + fm           -> format file
+leader + /            -> toggle comment 
+leader + e            -> nvimtree focus windows 
+leader + x            -> close current buffer 
+leader + ff           -> find files 
+leader + s            -> replace all the occurrences of current word in the buffer
+leader + m            -> select current word , after -> n (select next occ) 
+
+terminal naviagation : 
+leader + v            -> vertical terminal windows 
+leader + h            -> horizontal terminal window 
+Ctrl + x              -> "n" mode in terminal (by default "i")
+:q                    -> quit terminal 
+Alt + h               -> toggle horizontal terminal
+Alt + v               -> toggle vertical terminal
+Alt + i               -> toggle floating terminal 
+
+
+
+nvim tree : 
+
+Ctl + n               -> toggle nvimtree
+o                     -> open file/folder 
+a                     -> create a new file/folder 
+r                     -> rename file/folder
+x                     -> cut  file/folder
+y                     -> copy a file/folder 
+d                     -> delete a file/folder  
+q                     -> quit  
+
+
+
+
+/*
+how to select multiple lines in same column in neovim : 
+1. ctrl+v to enter visual block mode.
+2. select the lines using j or k.
+3. Shift + i to enter insert mode.
+4. type the text you want to insert.
+5. Press Esc to apply changes to all lines.
+
+if i want to delete some character from the selected lines : 
+1. select the lines using ctrl+v. 
+2. press x to delete the character.  
+
+if i want to delete 3 characters backwards from the selected line : 
+1. select the lines using ctrl+v. 
+2. press shift + 3 + x. 
+*/
+
+
+
+
